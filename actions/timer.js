@@ -1,0 +1,5 @@
+module.exports = {
+  init: () => ({seconds: 0, minutes: 0}),
+  setSecondScroll: (timer, secondScroll) => Object.assign({}, timer, {seconds: Math.floor(secondScroll/6)}),
+  setMinuteScroll: (timer, minuteScroll) => Object.assign({}, timer, {minutes: Math.floor(minuteScroll/6)}),
+}

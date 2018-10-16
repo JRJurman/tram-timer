@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('Poppins-Light.ttf') format('truetype');
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins';
+  background: aliceblue;
+}
