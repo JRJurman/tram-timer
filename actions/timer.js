@@ -6,12 +6,8 @@ module.exports = {
     if (timer.seconds === 0 && timer.minutes === 0) {
       actions.notification({title: "Timer Ended!", body: 'Timer Ended'});
       actions.pauseTimer()
-      return timer
     }
     if (timer.seconds === 0) actions.decrementMinute()
-    return Object.assign({}, timer, {
-      seconds: timer.seconds === 0 ? 59 : timer.seconds - 1,
-      minutes: timer.seconds === 0 ? timer.minutes - 1 : timer.minutes
-    })
+    return timer
   }
 }

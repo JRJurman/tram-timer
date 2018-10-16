@@ -7,14 +7,14 @@ module.exports = {
   // we change it here by className (which will trigger the appropriate scroll triggers)
   decrementSecond: (scroll) => {
     const secondScrollControl = document.querySelector('.scroll-control.second-scroll')
-    secondScrollControl.scrollBy(0, -20) // defined in scroll-control element
+    secondScrollControl.scrollBy({behavior: 'smooth', top: -20}) // defined in scroll-control element
     return scroll
   },
   decrementMinute: (scroll) => {
     const minuteScrollControl = document.querySelector('.scroll-control.minute-scroll')
-    minuteScrollControl.scrollBy(0, -20) // defined in scroll-control element
+    minuteScrollControl.scrollBy({behavior: 'smooth', top: -20}) // defined in scroll-control element
     const secondScrollControl = document.querySelector('.scroll-control.second-scroll')
-    secondScrollControl.scrollBy(0, 20*60) // reset the seconds to 60
+    secondScrollControl.scrollBy({behavior: 'smooth', top: 20*59}) // reset the seconds to 60
     return scroll
   }
 }
