@@ -7,7 +7,7 @@ module.exports = {
       actions.notification({title: "Timer Ended!", body: 'Timer Ended'});
       actions.pauseTimer()
     }
-    if (timer.seconds === 0) actions.decrementMinute()
+    if (timer.seconds === 0 && timer.minutes !== 0) actions.decrementMinute()
     return timer
   }
 }

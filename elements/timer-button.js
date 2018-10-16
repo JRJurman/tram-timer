@@ -4,7 +4,7 @@ const html = Tram.html()
 module.exports = (attrs, children) => {
   const buttonStyle = `
     font-size: 10vh;
-    height: 13vh;
+    line-height: 14vh;
     border-radius: 0.4em;
     margin: 0.4em;
     font-family: inherit;
@@ -16,7 +16,7 @@ module.exports = (attrs, children) => {
   const disabled = attrs.disabled ? 'disabled' : ''
   return html`
     <button style=${buttonStyle} onclick=${attrs.triggerpush} ${disabled}>
-      ${children}
+      <div style="margin-top: -0.2em;">${children}</div>
     </button>
   `
 }
