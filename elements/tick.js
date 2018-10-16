@@ -20,13 +20,22 @@ module.exports = (attrs, children) => {
     }
   }
 
+  const tickColor = (() => {
+    if (264 < tick && tick < 330 && attrs.rotation < 60) {
+      return 'grey'
+    }
+    if ((tick % 5) === 0) {
+      return 'orange'
+    }
+    return 'black'
+  })()
+
   return svg`
     <rect
       x=${sizes[attrs.size].x} y=${sizes[attrs.size].y}
       rx=${sizes[attrs.size].rx} ry=${sizes[attrs.size].ry}
       width=${sizes[attrs.size].width} height=${sizes[attrs.size].height}
-      fill=${!(tick % 5) ? 'orange' : 'black'}
-      style=${tickStyle(tick - parseInt(attrs.rotation))}
+      fill=${tickColor} style=${tickStyle(tick - parseInt(attrs.rotation))}
     />
   `
 }

@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Poppins';
-  src: url('Poppins-Light.ttf') format('truetype');
+  font-family: 'Concert One';
+  src: url('ConcertOne-Regular.ttf') format('truetype');
 }
 
 html, body {
@@ -8,6 +8,11 @@ html, body {
 }
 
 body {
-  font-family: 'Poppins';
+  font-family: 'Concert One', cursive;
   background: aliceblue;
+}
+
+/* remove scroll, based on https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll */
+.scroll-control::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
 }

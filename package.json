@@ -7,7 +7,7 @@
     "build": "NODE_ENV=production webpack",
     "test": "jasmine ./specs/specs.js",
     "predeploy": "npm run build",
-    "deploy": "surge ./dist https://tram-one-timer-example.surge.sh"
+    "deploy": "surge ./dist https://tram-timer.surge.sh"
   },
   "keywords": [
     "tram-one"

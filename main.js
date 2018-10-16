@@ -10,8 +10,14 @@ app.addActions({
 })
 app.addActions({
   scroller: require('./actions/scroller'),
-  timer: require('./actions/timer')
+  timer: require('./actions/timer'),
+  ticker: require('./actions/ticker'),
+  clock: require('./actions/clock'),
 })
 app.start('.main')
+
+app.addListener((store, actions, actionName, actionArg) => {
+  console.log(actionName, actionArg)
+})
 
 app.engine.actions.requestPermission()
