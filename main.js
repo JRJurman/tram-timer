@@ -1,7 +1,10 @@
 const Tram = require('tram-one')
 require("babel-polyfill")
 
-const app = new Tram()
+window.engine = {}
+const app = new Tram({
+  webEngine: window.engine
+})
 app.addRoute('/', require('./pages/home'))
 app.addRoute('/404', require('./pages/404'))
 app.addActions({

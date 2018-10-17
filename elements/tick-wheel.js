@@ -33,8 +33,12 @@ module.exports = (attrs, children) => {
     <svg viewBox="0 0 100 100" style=${attrs.style} preserveAspectRatio="xMinYMid meet">
       <!-- ${selectLine} -->
       ${selectTicks}
-      ${outerTicks}
-      ${innerTicks}
+      <g style=${tickStyle(-attrs.outerwheel)}>
+        ${outerTicks}
+      </g>
+      <g style=${tickStyle(-attrs.innerwheel)}>
+        ${innerTicks}
+      </g>
       ${setTime}
     </svg>
   `

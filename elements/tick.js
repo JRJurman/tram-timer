@@ -35,7 +35,7 @@ module.exports = (attrs, children) => {
       x=${sizes[attrs.size].x} y=${sizes[attrs.size].y}
       rx=${sizes[attrs.size].rx} ry=${sizes[attrs.size].ry}
       width=${sizes[attrs.size].width} height=${sizes[attrs.size].height}
-      fill=${tickColor} style=${tickStyle(tick - parseInt(attrs.rotation))}
+      fill=${tickColor} style=${tickStyle(tick)}
     />
   `
 }

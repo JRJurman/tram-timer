@@ -13,7 +13,6 @@ module.exports = (attrs) => {
     .map(option => html`<div />`)
 
   const loopScroll = event => {
-    console.log(event.currentTarget.scrollTop)
     attrs.setscroll(event.currentTarget.scrollTop*(6/height))
   }
 
