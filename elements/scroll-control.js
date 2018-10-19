@@ -1,20 +1,19 @@
 const Tram = require('tram-one')
 const html = Tram.html()
 
+const height = 20 // change value in scroller.js
+
 module.exports = (attrs) => {
-  const height = 20 // change value in scroller.js
   const containerStyle = `
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     ${attrs.style || ''}
   `
 
-  const options = [...Array(90).keys()]
-    .map(option => html`<div />`)
+  const loopScroll = event => attrs.setscroll(event.currentTarget.scrollTop*(6/height))
 
-  const loopScroll = event => {
-    attrs.setscroll(event.currentTarget.scrollTop*(6/height))
-  }
+  const options = [...Array(90).keys()]
+    .map(() => html`<div />`)
 
   return html`
     <div>

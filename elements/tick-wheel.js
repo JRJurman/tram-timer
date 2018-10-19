@@ -25,13 +25,10 @@ module.exports = (attrs, children) => {
     svg`<rect x="59" y="98" width="12" height="4" rx="3" ry="3" stroke="grey" fill="white" style=${tickStyle(-30)} />`
   ]
 
-  const selectLine = svg`<rect x="0" y="100" width="200" height="0.5" stroke="grey" fill="none" style=${tickStyle(-30)} />`
-
   const setTime = svg`<text x="5" y="95">${attrs.time}</text>`
 
   return svg`
     <svg viewBox="0 0 100 100" style=${attrs.style} preserveAspectRatio="xMinYMid meet">
-      <!-- ${selectLine} -->
       ${selectTicks}
       <g style=${tickStyle(-attrs.outerwheel)}>
         ${outerTicks}

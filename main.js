@@ -19,8 +19,8 @@ app.addActions({
 })
 app.start('.main')
 
-app.addListener((store, actions, actionName, actionArg) => {
-  console.log(actionName, actionArg)
-})
+// app.addListener((store, actions, actionName, actionArg) => {
+//   console.log(actionName, actionArg)
+// })
 
 app.engine.actions.requestPermission()
